@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>AGROGT | Conectarse</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -34,31 +34,36 @@
 
 </head>
 
-<body background-image ="../Imagenes/avianca.png" >
+<body>
+    
 
     <div class="container">
         <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Please Sign In</h3>
+                        <h3 class="panel-title">Ingrese sus datos</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" runat="server">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus>
+                                    <asp:TextBox runat="server" ID="TxtUser" CssClass="form-control"></asp:TextBox>
+
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="Password" name="password" type="password" value="">
+                                    <asp:TextBox runat="server" ID="TxtPass" CssClass="form-control" TextMode="Password"></asp:TextBox>
                                 </div>
-                                <div class="checkbox">
+                              <div class="form-group">
                                     <label>
-                                        <input name="remember" type="checkbox" value="Remember Me">Remember Me
+                                      <a style="color:#50d0d0" href="#">Olvido su contraseña?</a>
                                     </label>
+                                 <label runat="server" id="LblEstado" style="color:#db4a39"></label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="../index.html" class="btn btn-lg btn-success btn-block">Login</a>
+                               
+                                <asp:Button runat="server" ID="conectar" Text="Entrar" CssClass="btn btn-info btn-lg"/>
+                             
                             </fieldset>
                         </form>
                     </div>
@@ -78,6 +83,11 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+
+    <script>
+
+
+    </script>
 
 </bod>
 
